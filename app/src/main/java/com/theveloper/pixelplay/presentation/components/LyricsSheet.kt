@@ -523,10 +523,16 @@ fun LyricsSheet(
             // Read backProgressProvider inside graphicsLayer (draw-phase) — no layout
             // pass is triggered per gesture frame, same pattern as SheetVisualState.
             // 0f = fully visible, 1f = fully dismissed.
-            // Effect: slides down 8 % of height (no fade).
+            // Effect: scale down to 92 % + slide down 8 % of height + fade to 72 % alpha.
+            // Matches Android predictive back spec for full-screen destinations and
+            // mirrors the scale+alpha treatment used across the rest of the app.
             .graphicsLayer {
                 val p = backProgressProvider.value
-                translationY = androidx.compose.ui.util.lerp(0f, size.height * 0.08f, p)
+                val scale = lerp(1f, 0.92f, p)
+                scaleX = scale
+                scaleY = scale
+                translationY = lerp(0f, size.height * 0.08f, p)
+                alpha = lerp(1f, 0.72f, p)
             }
             .clip(RoundedCornerShape(32.dp))
             .pointerInput(Unit) {
