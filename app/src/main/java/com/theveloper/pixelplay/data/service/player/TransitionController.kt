@@ -50,9 +50,20 @@ class TransitionController @Inject constructor(
             currentObservedPlayer = newPlayer
             newPlayer.addListener(listener)
 
-            // Trigger check for the new player immediately
+            // Delay before scheduling so the incoming track's duration has time to resolve
+            // and currentPosition stabilizes. Without this, scheduleTransitionFor reads
+            // C.TIME_UNSET for duration, waits, then finds currentPosition already past
+            // transitionPoint and fires another crossfade immediately on the new track.
             if (newPlayer.isPlaying) {
-                newPlayer.currentMediaItem?.let { scheduleTransitionFor(it) }
+                val item = newPlayer.currentMediaItem
+                if (item != null) {
+                    scope.launch {
+                        delay(1_000L)
+                        if (currentObservedPlayer === newPlayer) {
+                            scheduleTransitionFor(item)
+                        }
+                    }
+                }
             }
         }
     }
