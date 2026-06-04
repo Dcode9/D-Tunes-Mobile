@@ -1,8 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <!-- Main settings screen -->
-    <string name="settings_top_bar_title">Paramètres</string>
-    <string name="settings_accounts_row_title">Comptes</string>
+    <string
+        name="settings_accounts_row_subtitle"
+    >Manage Telegram, Google Drive, NetEase, and more services</string>
+    <string name="settings_category_library_title">Music Management</string>
+    <string
+        name="settings_category_library_subtitle"
+    >Manage folders, refresh library, parsing options</string>
+    <string name="settings_category_appearance_title">Appearance</string>
+    <string
+        name="settings_category_appearance_subtitle"
+    >Themes, layout, and visual styles</string>
+    <string name="settings_category_playback_title">Playback</string>
+    <string
+        name="settings_category_playback_subtitle"
+    >Audio behavior, crossfade, and background play</string>
+    <string name="settings_category_behavior_title">Behavior</string>
+    <string
+        name="settings_category_behavior_subtitle"
+    >Gestures, haptics, and navigation behavior</string>
+    <string name="settings_category_ai_title">AI Integration (β)</string>
+    <string
+        name="settings_category_ai_subtitle"
+    >AI providers, API keys, and model settings</string>
+    <string name="settings_category_backup_title">Backup &amp; Restore</string>
+    <string
+        name="settings_category_backup_subtitle"
+    >Export and recover your personal app data</string>
+    <string name="settings_category_developer_title">Developer Options</string>
+    <string
+        name="settings_category_developer_subtitle"
+    >Experimental features and debugging</string>
+    <string name="settings_category_equalizer_title">Equalizer</string>
+    <string
+        name="settings_category_equalizer_subtitle"
+    >Adjust audio frequencies and presets</string>
+    <string
+        name="settings_category_device_capabilities_title"
+    >Device Capabilities</string>
+    <string
+        name="settings_category_device_capabilities_subtitle"
+    >Audio specs, codecs, and decoder info</string>
+    <string name="settings_category_about_title">About</string>
+    <string
+        name="settings_category_about_subtitle"
+    >App info, version, and credits</string>
     <string
         name="settings_accounts_row_subtitle"
     >Gérer Telegram, Google Drive, NetEase Music et d\'autres services</string>
