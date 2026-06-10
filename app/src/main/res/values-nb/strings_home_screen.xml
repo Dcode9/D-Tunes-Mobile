@@ -251,4 +251,27 @@
     <string name="stats_empty_no_tracks_subtitle">Lytt til favorittene dine for å se dem her.</string>
     <string name="stats_collapse_tracks">Skjul spor</string>
     <string name="stats_show_all_tracks">Vis alle spor</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d t %2$02d min</string>
+    <string name="duration_minutes_long">%1$d min</string>
+    <string name="duration_hours_minutes_medium">%1$d t %2$02d m</string>
+    <string name="duration_hours_medium">%1$d t</string>
+    <string name="duration_minutes_medium">%1$d m</string>
+    <string name="duration_seconds_medium">%1$d s</string>
+    <string name="duration_hours_minutes_short">%1$dt %2$02dm</string>
+    <string name="duration_hours_short">%1$dt</string>
+    <string name="duration_minutes_short">%1$dm</string>
+    <string name="duration_seconds_short">%1$ds</string>
+    <string name="time_ago_never">Aldri</string>
+    <string name="time_ago_just_now">Akkurat nå</string>
+    <string name="time_ago_day_singular">1 dag siden</string>
+    <string name="time_ago_days_plural">%1$d dager siden</string>
+    <string name="time_ago_hour_singular">1 time siden</string>
+    <string name="time_ago_hours_plural">%1$d timer siden</string>
+    <string name="time_ago_minute_singular">1 minutt siden</string>
+    <string name="time_ago_minutes_plural">%1$d minutter siden</string>
+    <string name="song_count_singular">%1$d sang</string>
+    <string name="song_count_plural">%1$d sanger</string>
+    <string name="stats_week_label">Uke %1$d</string>
 </resources>

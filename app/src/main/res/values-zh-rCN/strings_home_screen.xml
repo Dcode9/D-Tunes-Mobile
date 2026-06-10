@@ -251,4 +251,27 @@
     <string name="stats_empty_no_tracks_subtitle">听您喜欢的歌，它们将会在这里高亮显示。</string>
     <string name="stats_collapse_tracks">收起曲目</string>
     <string name="stats_show_all_tracks">显示所有曲目</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d 小时 %2$02d 分钟</string>
+    <string name="duration_minutes_long">%1$d 分钟</string>
+    <string name="duration_hours_minutes_medium">%1$d 小时 %2$02d 分</string>
+    <string name="duration_hours_medium">%1$d 小时</string>
+    <string name="duration_minutes_medium">%1$d 分</string>
+    <string name="duration_seconds_medium">%1$d 秒</string>
+    <string name="duration_hours_minutes_short">%1$d小时%2$02d分</string>
+    <string name="duration_hours_short">%1$d小时</string>
+    <string name="duration_minutes_short">%1$d分</string>
+    <string name="duration_seconds_short">%1$d秒</string>
+    <string name="time_ago_never">从未</string>
+    <string name="time_ago_just_now">刚刚</string>
+    <string name="time_ago_day_singular">1 天前</string>
+    <string name="time_ago_days_plural">%1$d 天前</string>
+    <string name="time_ago_hour_singular">1 小时前</string>
+    <string name="time_ago_hours_plural">%1$d 小时前</string>
+    <string name="time_ago_minute_singular">1 分钟前</string>
+    <string name="time_ago_minutes_plural">%1$d 分钟前</string>
+    <string name="song_count_singular">%1$d 首歌曲</string>
+    <string name="song_count_plural">%1$d 首歌曲</string>
+    <string name="stats_week_label">第 %1$d 周</string>
 </resources>

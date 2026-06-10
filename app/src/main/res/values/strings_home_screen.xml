@@ -251,4 +251,27 @@
     <string name="stats_empty_no_tracks_subtitle">Listen to your favorites to see them highlighted here.</string>
     <string name="stats_collapse_tracks">Collapse tracks</string>
     <string name="stats_show_all_tracks">Show all tracks</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d h %2$02d min</string>
+    <string name="duration_minutes_long">%1$d min</string>
+    <string name="duration_hours_minutes_medium">%1$d h %2$02d m</string>
+    <string name="duration_hours_medium">%1$d h</string>
+    <string name="duration_minutes_medium">%1$d m</string>
+    <string name="duration_seconds_medium">%1$d s</string>
+    <string name="duration_hours_minutes_short">%1$dh %2$02dm</string>
+    <string name="duration_hours_short">%1$dh</string>
+    <string name="duration_minutes_short">%1$dm</string>
+    <string name="duration_seconds_short">%1$ds</string>
+    <string name="time_ago_never">Never</string>
+    <string name="time_ago_just_now">Just now</string>
+    <string name="time_ago_day_singular">1 day ago</string>
+    <string name="time_ago_days_plural">%1$d days ago</string>
+    <string name="time_ago_hour_singular">1 hour ago</string>
+    <string name="time_ago_hours_plural">%1$d hours ago</string>
+    <string name="time_ago_minute_singular">1 minute ago</string>
+    <string name="time_ago_minutes_plural">%1$d minutes ago</string>
+    <string name="song_count_singular">%1$d Song</string>
+    <string name="song_count_plural">%1$d Songs</string>
+    <string name="stats_week_label">Week %1$d</string>
 </resources>

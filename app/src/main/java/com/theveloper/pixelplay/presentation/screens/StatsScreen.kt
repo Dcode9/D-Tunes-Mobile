@@ -761,9 +761,11 @@ private fun ListeningHabitsCard(
                     icon = Icons.Outlined.CalendarMonth
                 )
                 summary.peakTimeline?.let { peak ->
+                    val use24Hour = AndroidDateFormat.is24HourFormat(LocalContext.current)
+                    val formattedLabel = formatTimelineLabelForRange(peak.label, summary.range, emDash, use24Hour)
                     HighlightRow(
                         title = stringResource(R.string.stats_habit_peak_timeline_slot),
-                        value = peak.label,
+                        value = formattedLabel,
                         supporting = formatListeningDurationCompact(peak.totalDurationMs),
                         icon = Icons.Outlined.AutoGraph
                     )
@@ -1747,10 +1749,11 @@ private fun convertHourLabel(label: String, use24Hour: Boolean): String {
             else -> hour12
         }
         return if (use24Hour) {
-            String.format(Locale.US, "%02d:00", hour24)
+            String.format(Locale.getDefault(), "%02d:00", hour24)
         } else {
-            val meridiem = if (isPm) "PM" else "AM"
-            String.format(Locale.US, "%d %s", hour12, meridiem)
+            val time = java.time.LocalTime.of(hour24, 0)
+            val formatter = java.time.format.DateTimeFormatter.ofPattern("h a", Locale.getDefault())
+            time.format(formatter)
         }
     }
 
@@ -1759,15 +1762,11 @@ private fun convertHourLabel(label: String, use24Hour: Boolean): String {
     if (h24Match != null) {
         val hour24 = h24Match.groupValues[1].toIntOrNull() ?: return label
         return if (use24Hour) {
-            String.format(Locale.US, "%02d:00", hour24)
+            String.format(Locale.getDefault(), "%02d:00", hour24)
         } else {
-            val hour12 = when {
-                hour24 == 0 -> 12
-                hour24 > 12 -> hour24 - 12
-                else -> hour24
-            }
-            val meridiem = if (hour24 < 12) "AM" else "PM"
-            String.format(Locale.US, "%d %s", hour12, meridiem)
+            val time = java.time.LocalTime.of(hour24, 0)
+            val formatter = java.time.format.DateTimeFormatter.ofPattern("h a", Locale.getDefault())
+            time.format(formatter)
         }
     }
 
@@ -1775,15 +1774,11 @@ private fun convertHourLabel(label: String, use24Hour: Boolean): String {
     val bareHour = label.toIntOrNull()
     if (bareHour != null && bareHour in 0..23) {
         return if (use24Hour) {
-            String.format(Locale.US, "%02d:00", bareHour)
+            String.format(Locale.getDefault(), "%02d:00", bareHour)
         } else {
-            val hour12 = when {
-                bareHour == 0 -> 12
-                bareHour > 12 -> bareHour - 12
-                else -> bareHour
-            }
-            val meridiem = if (bareHour < 12) "AM" else "PM"
-            String.format(Locale.US, "%d %s", hour12, meridiem)
+            val time = java.time.LocalTime.of(bareHour, 0)
+            val formatter = java.time.format.DateTimeFormatter.ofPattern("h a", Locale.getDefault())
+            time.format(formatter)
         }
     }
 

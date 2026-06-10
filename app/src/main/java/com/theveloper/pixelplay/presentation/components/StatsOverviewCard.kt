@@ -348,9 +348,11 @@ private fun convertHourLabel(label: String, range: StatsTimeRange, use24Hour: Bo
             else -> hour12
         }
         return if (use24Hour) {
-            String.format(java.util.Locale.US, "%02d:00", hour24)
+            String.format(java.util.Locale.getDefault(), "%02d:00", hour24)
         } else {
-            String.format(java.util.Locale.US, "%d %s", hour12, if (isPm) "PM" else "AM")
+            val time = java.time.LocalTime.of(hour24, 0)
+            val formatter = java.time.format.DateTimeFormatter.ofPattern("h a", java.util.Locale.getDefault())
+            time.format(formatter)
         }
     }
 
@@ -359,10 +361,11 @@ private fun convertHourLabel(label: String, range: StatsTimeRange, use24Hour: Bo
     if (h24Match != null) {
         val hour24 = h24Match.groupValues[1].toIntOrNull() ?: return label
         return if (use24Hour) {
-            String.format(java.util.Locale.US, "%02d:00", hour24)
+            String.format(java.util.Locale.getDefault(), "%02d:00", hour24)
         } else {
-            val hour12 = when { hour24 == 0 -> 12; hour24 > 12 -> hour24 - 12; else -> hour24 }
-            String.format(java.util.Locale.US, "%d %s", hour12, if (hour24 < 12) "AM" else "PM")
+            val time = java.time.LocalTime.of(hour24, 0)
+            val formatter = java.time.format.DateTimeFormatter.ofPattern("h a", java.util.Locale.getDefault())
+            time.format(formatter)
         }
     }
 
@@ -370,10 +373,11 @@ private fun convertHourLabel(label: String, range: StatsTimeRange, use24Hour: Bo
     val bareHour = label.trim().toIntOrNull()
     if (bareHour != null && bareHour in 0..23) {
         return if (use24Hour) {
-            String.format(java.util.Locale.US, "%02d:00", bareHour)
+            String.format(java.util.Locale.getDefault(), "%02d:00", bareHour)
         } else {
-            val hour12 = when { bareHour == 0 -> 12; bareHour > 12 -> bareHour - 12; else -> bareHour }
-            String.format(java.util.Locale.US, "%d %s", hour12, if (bareHour < 12) "AM" else "PM")
+            val time = java.time.LocalTime.of(bareHour, 0)
+            val formatter = java.time.format.DateTimeFormatter.ofPattern("h a", java.util.Locale.getDefault())
+            time.format(formatter)
         }
     }
 

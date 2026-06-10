@@ -251,4 +251,27 @@
     <string name="stats_empty_no_tracks_subtitle">Favorilerinizi dinleyin, burada öne çıksınlar.</string>
     <string name="stats_collapse_tracks">Parçaları daralt</string>
     <string name="stats_show_all_tracks">Tüm parçaları göster</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d sa %2$02d dk</string>
+    <string name="duration_minutes_long">%1$d dk</string>
+    <string name="duration_hours_minutes_medium">%1$d sa %2$02d dk</string>
+    <string name="duration_hours_medium">%1$d sa</string>
+    <string name="duration_minutes_medium">%1$d dk</string>
+    <string name="duration_seconds_medium">%1$d sn</string>
+    <string name="duration_hours_minutes_short">%1$dsa %2$02ddk</string>
+    <string name="duration_hours_short">%1$dsa</string>
+    <string name="duration_minutes_short">%1$ddk</string>
+    <string name="duration_seconds_short">%1$dsn</string>
+    <string name="time_ago_never">Hiçbir zaman</string>
+    <string name="time_ago_just_now">Az önce</string>
+    <string name="time_ago_day_singular">1 gün önce</string>
+    <string name="time_ago_days_plural">%1$d gün önce</string>
+    <string name="time_ago_hour_singular">1 saat önce</string>
+    <string name="time_ago_hours_plural">%1$d saat önce</string>
+    <string name="time_ago_minute_singular">1 dakika önce</string>
+    <string name="time_ago_minutes_plural">%1$d dakika önce</string>
+    <string name="song_count_singular">%1$d Şarkı</string>
+    <string name="song_count_plural">%1$d Şarkı</string>
+    <string name="stats_week_label">%1$d. Hafta</string>
 </resources>

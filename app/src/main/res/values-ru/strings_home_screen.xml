@@ -253,4 +253,27 @@
     <string name="stats_empty_no_tracks_subtitle">Слушайте любимые треки, чтобы они появились здесь.</string>
     <string name="stats_collapse_tracks">Свернуть треки</string>
     <string name="stats_show_all_tracks">Показать все треки</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d ч %2$02d мин</string>
+    <string name="duration_minutes_long">%1$d мин</string>
+    <string name="duration_hours_minutes_medium">%1$d ч %2$02d м</string>
+    <string name="duration_hours_medium">%1$d ч</string>
+    <string name="duration_minutes_medium">%1$d м</string>
+    <string name="duration_seconds_medium">%1$d с</string>
+    <string name="duration_hours_minutes_short">%1$dч %2$02dм</string>
+    <string name="duration_hours_short">%1$dч</string>
+    <string name="duration_minutes_short">%1$dм</string>
+    <string name="duration_seconds_short">%1$dс</string>
+    <string name="time_ago_never">Никогда</string>
+    <string name="time_ago_just_now">Только что</string>
+    <string name="time_ago_day_singular">1 день назад</string>
+    <string name="time_ago_days_plural">%1$d дней назад</string>
+    <string name="time_ago_hour_singular">1 час назад</string>
+    <string name="time_ago_hours_plural">%1$d часов назад</string>
+    <string name="time_ago_minute_singular">1 минуту назад</string>
+    <string name="time_ago_minutes_plural">%1$d минут назад</string>
+    <string name="song_count_singular">%1$d песня</string>
+    <string name="song_count_plural">%1$d песен</string>
+    <string name="stats_week_label">Неделя %1$d</string>
 </resources>

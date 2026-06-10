@@ -251,4 +251,27 @@
     <string name="stats_empty_no_tracks_subtitle">Dengarkan favorit Anda untuk melihatnya disorot di sini.</string>
     <string name="stats_collapse_tracks">Ciutkan trek</string>
     <string name="stats_show_all_tracks">Tampilkan semua trek</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d jam %2$02d menit</string>
+    <string name="duration_minutes_long">%1$d menit</string>
+    <string name="duration_hours_minutes_medium">%1$d j %2$02d m</string>
+    <string name="duration_hours_medium">%1$d j</string>
+    <string name="duration_minutes_medium">%1$d m</string>
+    <string name="duration_seconds_medium">%1$d d</string>
+    <string name="duration_hours_minutes_short">%1$dj %2$02dm</string>
+    <string name="duration_hours_short">%1$dj</string>
+    <string name="duration_minutes_short">%1$dm</string>
+    <string name="duration_seconds_short">%1$dd</string>
+    <string name="time_ago_never">Tidak pernah</string>
+    <string name="time_ago_just_now">Baru saja</string>
+    <string name="time_ago_day_singular">1 hari yang lalu</string>
+    <string name="time_ago_days_plural">%1$d hari yang lalu</string>
+    <string name="time_ago_hour_singular">1 jam yang lalu</string>
+    <string name="time_ago_hours_plural">%1$d jam yang lalu</string>
+    <string name="time_ago_minute_singular">1 menit yang lalu</string>
+    <string name="time_ago_minutes_plural">%1$d menit yang lalu</string>
+    <string name="song_count_singular">%1$d Lagu</string>
+    <string name="song_count_plural">%1$d Lagu</string>
+    <string name="stats_week_label">Minggu %1$d</string>
 </resources>

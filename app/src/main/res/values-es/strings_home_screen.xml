@@ -251,4 +251,27 @@
     <string name="stats_empty_no_tracks_subtitle">Escucha tus favoritas para verlas destacadas aquí.</string>
     <string name="stats_collapse_tracks">Contraer pistas</string>
     <string name="stats_show_all_tracks">Mostrar todas las pistas</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d h %2$02d min</string>
+    <string name="duration_minutes_long">%1$d min</string>
+    <string name="duration_hours_minutes_medium">%1$d h %2$02d m</string>
+    <string name="duration_hours_medium">%1$d h</string>
+    <string name="duration_minutes_medium">%1$d m</string>
+    <string name="duration_seconds_medium">%1$d s</string>
+    <string name="duration_hours_minutes_short">%1$dh %2$02dm</string>
+    <string name="duration_hours_short">%1$dh</string>
+    <string name="duration_minutes_short">%1$dm</string>
+    <string name="duration_seconds_short">%1$ds</string>
+    <string name="time_ago_never">Nunca</string>
+    <string name="time_ago_just_now">Ahora mismo</string>
+    <string name="time_ago_day_singular">Hace 1 día</string>
+    <string name="time_ago_days_plural">Hace %1$d días</string>
+    <string name="time_ago_hour_singular">Hace 1 hora</string>
+    <string name="time_ago_hours_plural">Hace %1$d horas</string>
+    <string name="time_ago_minute_singular">Hace 1 minuto</string>
+    <string name="time_ago_minutes_plural">Hace %1$d minutos</string>
+    <string name="song_count_singular">%1$d canción</string>
+    <string name="song_count_plural">%1$d canciones</string>
+    <string name="stats_week_label">Semana %1$d</string>
 </resources>

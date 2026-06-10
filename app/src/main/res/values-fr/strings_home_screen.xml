@@ -251,4 +251,27 @@
     <string name="stats_empty_no_tracks_subtitle">Écoutez vos favoris pour les voir mis en valeur ici.</string>
     <string name="stats_collapse_tracks">Réduire les pistes</string>
     <string name="stats_show_all_tracks">Afficher toutes les pistes</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d h %2$02d min</string>
+    <string name="duration_minutes_long">%1$d min</string>
+    <string name="duration_hours_minutes_medium">%1$d h %2$02d m</string>
+    <string name="duration_hours_medium">%1$d h</string>
+    <string name="duration_minutes_medium">%1$d m</string>
+    <string name="duration_seconds_medium">%1$d s</string>
+    <string name="duration_hours_minutes_short">%1$dh %2$02dm</string>
+    <string name="duration_hours_short">%1$dh</string>
+    <string name="duration_minutes_short">%1$dm</string>
+    <string name="duration_seconds_short">%1$ds</string>
+    <string name="time_ago_never">Jamais</string>
+    <string name="time_ago_just_now">À l\'instant</string>
+    <string name="time_ago_day_singular">Il y a 1 jour</string>
+    <string name="time_ago_days_plural">Il y a %1$d jours</string>
+    <string name="time_ago_hour_singular">Il y a 1 heure</string>
+    <string name="time_ago_hours_plural">Il y a %1$d heures</string>
+    <string name="time_ago_minute_singular">Il y a 1 minute</string>
+    <string name="time_ago_minutes_plural">Il y a %1$d minutes</string>
+    <string name="song_count_singular">%1$d chanson</string>
+    <string name="song_count_plural">%1$d chansons</string>
+    <string name="stats_week_label">Semaine %1$d</string>
 </resources>

@@ -251,4 +251,27 @@
     <string name="stats_empty_no_tracks_subtitle">Favoriten hören, um sie hier zu sehen.</string>
     <string name="stats_collapse_tracks">Titel einklappen</string>
     <string name="stats_show_all_tracks">Alle Titel anzeigen</string>
+
+    <!-- Time and Duration Formatting -->
+    <string name="duration_hours_minutes_long">%1$d Std. %2$02d Min.</string>
+    <string name="duration_minutes_long">%1$d Min.</string>
+    <string name="duration_hours_minutes_medium">%1$d Std. %2$02d Min.</string>
+    <string name="duration_hours_medium">%1$d Std.</string>
+    <string name="duration_minutes_medium">%1$d Min.</string>
+    <string name="duration_seconds_medium">%1$d Sek.</string>
+    <string name="duration_hours_minutes_short">%1$d Std. %2$02d Min.</string>
+    <string name="duration_hours_short">%1$d Std.</string>
+    <string name="duration_minutes_short">%1$d Min.</string>
+    <string name="duration_seconds_short">%1$d Sek.</string>
+    <string name="time_ago_never">Nie</string>
+    <string name="time_ago_just_now">Gerade eben</string>
+    <string name="time_ago_day_singular">Vor 1 Tag</string>
+    <string name="time_ago_days_plural">Vor %1$d Tagen</string>
+    <string name="time_ago_hour_singular">Vor 1 Stunde</string>
+    <string name="time_ago_hours_plural">Vor %1$d Stunden</string>
+    <string name="time_ago_minute_singular">Vor 1 Minute</string>
+    <string name="time_ago_minutes_plural">Vor %1$d Minuten</string>
+    <string name="song_count_singular">%1$d Song</string>
+    <string name="song_count_plural">%1$d Songs</string>
+    <string name="stats_week_label">Woche %1$d</string>
 </resources>
