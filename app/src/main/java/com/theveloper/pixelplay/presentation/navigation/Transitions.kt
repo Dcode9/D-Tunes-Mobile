@@ -3,6 +3,7 @@ package com.theveloper.pixelplay.presentation.navigation
 import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.ExitTransition
 import androidx.compose.animation.core.CubicBezierEasing
+import androidx.compose.animation.core.Easing
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -50,10 +51,13 @@ fun aospSharedAxisPopEnter(): EnterTransition {
 // Equivale a sud_slide_back_out (la pantalla secundaria se destruye deslizándose a la derecha)
 fun aospSharedAxisPopExit(): ExitTransition {
     return slideOutHorizontally(
-        targetOffsetX = { it / 3 }, // Se destruye deslizándose 1/3 a la derecha
-        animationSpec = tween(durationMillis = AOSP_TRANSITION_DURATION, easing = M3EmphasizedEasing)
+        targetOffsetX = { it }, // Se desliza completamente fuera de la pantalla
+        animationSpec = tween(
+            durationMillis = AOSP_TRANSITION_DURATION,
+            easing = Easing { f -> f * f * f } // Durante el arrastre se desplaza muy poco, y al completarse se desliza por completo
+        )
     ) + scaleOut(
-        targetScale = 0.92f, // Escala hacia abajo para dar efecto de profundidad sin desaparecer por completo
+        targetScale = 0.85f, // Se achica más (efecto de profundidad más pronunciado)
         animationSpec = tween(durationMillis = AOSP_TRANSITION_DURATION, easing = M3EmphasizedEasing)
     )
 }

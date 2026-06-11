@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.CompositingStrategy
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.draw.blur
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.media3.common.util.UnstableApi
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -67,9 +68,7 @@ fun ScreenWrapper(
     val visibleEntries by navController.visibleEntries.collectAsStateWithLifecycle()
     val myEntry = lifecycleOwner as? androidx.navigation.NavBackStackEntry
     val myIndex = visibleEntries.indexOfFirst { it.id == myEntry?.id }
-    val topIndex = visibleEntries.indexOfLast {
-        it.lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)
-    }
+    val topIndex = visibleEntries.lastIndex
 
     // currentBackStackEntry updates synchronously with navigate()/popBackStack(), so it
     // identifies the destination the user is moving TO. The incoming screen during a pop
@@ -115,6 +114,14 @@ fun ScreenWrapper(
         label = "dimAlpha"
     )
 
+    // Blur: If strictly behind Top -> 12dp. Else -> 0dp.
+    val targetBlur = if (shouldRunDepthEffects && shouldDim) 12f else 0f
+    val blurRadius by animateFloatAsState(
+        targetValue = targetBlur,
+        animationSpec = tween(durationMillis = 400, easing = FastOutSlowInEasing),
+        label = "blurRadius"
+    )
+
     Box(
         modifier = modifier
             .fillMaxSize()
@@ -138,14 +145,18 @@ fun ScreenWrapper(
                     this.clip = false
                 }
             }
+            .then(
+                if (shouldRunDepthEffects && blurRadius > 0.1f) {
+                    Modifier.blur(radius = blurRadius.dp)
+                } else {
+                    Modifier
+                }
+            )
             .background(MaterialTheme.colorScheme.background)
     ) {
         content()
 
         // Dim Layer Overlay
-        // Always composed with alpha-driven visibility instead of a conditional node.
-        // Conditionally adding/removing this Box when dimAlpha crosses 0 added a node to
-        // the composition tree mid-transition and contributed to the outgoing-screen flash.
         Box(
             modifier = Modifier
                 .fillMaxSize()
