@@ -581,7 +581,7 @@ class LyricsRepositoryImpl @Inject constructor(
                                 )
                             )
                         } catch (e: NumberFormatException) {
-                            Log.w(TAG, "Skipping database save for non-numeric song ID: ${song.id} (likely Telegram song). Lyrics will be cached in JSON.")
+                            Log.w(TAG, "Skipping database save for non-numeric song ID: ${song.id} (possible streaming or external source). Lyrics will be cached in JSON.")
                         }
                         
                         return@withContext parsedLyrics
