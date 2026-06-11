@@ -60,7 +60,6 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.foundation.border
 import androidx.compose.material.icons.rounded.CheckCircle
 import androidx.compose.material3.Icon
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
 
@@ -133,20 +132,19 @@ fun GenreCategoriesGrid(
                 )
                 
                 // Toggle Button with persistence and styling
-                // "Round to Square (12dp) when selected" logic:
-                // Assuming List View is the "Selected" / "Alternative" state.
-                val shape = androidx.compose.animation.core.animateFloatAsState(
-                    targetValue = if (!isGridView) 12f else 50f, // 12dp for List, 50% (Circle) for Grid
+                // Animate between rounded corners in list mode and circular appearance in grid mode.
+                val animatedCornerRadius = animateDpAsState(
+                    targetValue = if (!isGridView) 12.dp else 50.dp,
                     label = "shapeAnimation"
                 )
-                
+
                 androidx.compose.material3.FilledIconButton(
                     onClick = { playerViewModel.toggleGenreViewMode() },
                     colors = androidx.compose.material3.IconButtonDefaults.filledIconButtonColors(
                         containerColor = MaterialTheme.colorScheme.secondaryContainer,
                         contentColor = MaterialTheme.colorScheme.onSecondaryContainer
                     ),
-                    shape = RoundedCornerShape(shape.value.dp)
+                    shape = RoundedCornerShape(animatedCornerRadius.value)
                 ) {
                 androidx.compose.material3.Icon(
                         imageVector = if (isGridView) Icons.AutoMirrored.Rounded.ViewList else Icons.Rounded.GridView,
