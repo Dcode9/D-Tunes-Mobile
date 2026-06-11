@@ -1682,6 +1682,7 @@ class LyricsRepositoryImpl @Inject constructor(
 
     private fun cleanTitleSmart(title: String): String {
         // 1. Remove leading digits/spaces/dots/hyphens (e.g., "01 ", "01. ", "01 - ")
+        // \uFF0D is the fullwidth hyphen-minus character used in fullwidth/CJK text.
         var cleaned = title.replace(Regex("^[\\d\\s.\\-\\uFF0D]+"), "")
         
         // 2. Truncate at first special char (-, (, ), Asian brackets)
